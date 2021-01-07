@@ -15,21 +15,26 @@ function Login(props) {
   };
   console.log(gender);
   return (
-    <div>
+    <div className='form'>
       <form>
+        <div>
+
         <label>Gender</label>
         <select onChange={(e) => setGender(e.target.value)}>
           <option value=""></option>
           <option value="male">male</option>
           <option value="female">female</option>
         </select>
-       
+        </div>
+        <div>
+          
         <label>Age</label>
         <input
           type="number"
           onChange={(e) => setAge(e.target.value)}
           value={age}
         />
+       </div>
         <button disabled={!age} onClick={handleSubmit}>
           Submit
         </button>
