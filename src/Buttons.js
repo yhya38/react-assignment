@@ -5,7 +5,7 @@ function Buttons({ setItems }) {
    
     const fetchData = async (category) => {
       const response = await fetch(
-        `http://asia-south1-adon-interviews.cloudfunctions.net/getProductByCategory?category=${category}%27s-fashion`
+        `https://asia-south1-adon-interviews.cloudfunctions.net/getProductByCategory?category=${category}%27s-fashion`
       );
       const data = await response.json();
       const newData = data.data;
