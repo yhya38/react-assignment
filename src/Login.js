@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory, withRouter } from "react-router-dom";
-import Home from "./Home";
+import {  useHistory,  } from "react-router-dom";
 
 function Login(props) {
   const [gender, setGender] = useState("");
@@ -14,19 +13,26 @@ function Login(props) {
       state: { gender: gender, age: age },
     });
   };
+  console.log(gender);
   return (
     <div>
       <form>
         <label>Gender</label>
-
-        <input
-          type="text"
-          onChange={(e) => setGender(e.target.value)}
-          placeholder="men or women"
-        />
+        <select onChange={(e) => setGender(e.target.value)}>
+          <option value=""></option>
+          <option value="male">male</option>
+          <option value="female">female</option>
+        </select>
+       
         <label>Age</label>
-        <input type="number" onChange={(e) => setAge(e.target.value)} />
-        <button onClick={handleSubmit}>Submit</button>
+        <input
+          type="number"
+          onChange={(e) => setAge(e.target.value)}
+          value={age}
+        />
+        <button disabled={!age} onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
     </div>
   );
