@@ -1,0 +1,44 @@
+#phoneOTP {
+  margin: 40px;
+}
+
+#phNo {
+  font-family: "Museo-700";
+}
+
+#number {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 24px;
+}
+
+#sendOTP {
+  border: 1px solid black;
+  width: 70px;
+  height: 26px;
+} 
+ 
+form {
+  margin: 30px 40px;
+}
+
+form .gender{
+  font-family: "Museo-700";
+  font-size: 18px;
+}
+
+form input {
+  margin: 12px 6px 0;
+}
+
+form .age {
+  font-family: "Museo-700";
+  font-size: 17px;
+  padding-right: 10px;
+}
+
+form button {
+  margin-top: 20px;
+  width: 80px;
+  height: 25px;
+}

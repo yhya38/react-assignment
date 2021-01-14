@@ -1,0 +1,19 @@
+#phoneOTP {
+    margin: 40px;
+}
+
+#phNo {
+    font-family: "Museo-700";
+}
+
+#number {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 24px;
+}
+
+#sendOTP {
+    border: 1px solid black;
+    width: 70px;
+    height: 26px;
+}
