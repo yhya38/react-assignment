@@ -6,10 +6,13 @@ function Cart() {
   const [item, setItem] = useState(undefined);
 
   useEffect(() => {
-    const item = localStorage.getItem("items");
+    const item = JSON.parse(localStorage.getItem('items'));
 
     if (item) {
-      setItem(JSON.parse(item));
+      setItem(item);
+      
+      let total = item.reduce((prev, next) => prev + next.price, 0)
+      document.querySelector('.total').textContent += "Total cart value : $ " + total;
     }
   }, []);
 
@@ -19,7 +22,8 @@ function Cart() {
       <div className="home">
         {item && item.map((cart) => <Card buttonVisible={false} {...cart} />)}
       </div>
-
+      <div className="total" style={{margin:"20px 25px 60px"}}> </div>
+     
       <Navbar />
     </div>
   );

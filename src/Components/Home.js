@@ -63,6 +63,7 @@ import "./Home.css"
                   })
               }
           </div>
+          
           <Navbar/>
         </div>
     )

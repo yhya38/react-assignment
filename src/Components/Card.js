@@ -18,7 +18,6 @@ function Card({name, imageURL, price, buttonVisible=true}) {
         JSON.stringify([{ name, imageURL, price }])
       );
     }
-    // console.log(localStorage);
   };
 
     return (
